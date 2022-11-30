@@ -1,0 +1,112 @@
+:root {
+    --light-puple: #A3A5C3;
+    --dark-purple: #947EB0;
+    --light-green: #A9D2D5;
+    --gray-purple: #766C7F;
+    --gray-green: #808D8E;
+    --dark-blue: #0B2027;
+    --gold: #FFD639;
+    --green-blue: #40798C
+}
+
+body {
+    background: var(--dark-blue);
+}
+
+.big-box {    
+    border-radius: 10px;
+    background: white;
+    max-width: 70%;
+    max-height: 60%px;
+    box-shadow: 10px 10px 10px var(--gray-green);
+    margin: auto;   
+}
+
+.password-generator {
+    content: flex;
+    text-align: center;
+    padding-bottom: 3%;
+    
+}
+
+.title {
+    font-family: 'Bebas Neue', cursive;
+    text-shadow:#FC0 1px 0 10px;
+    color: var(--dark-blue);
+    margin-top: 5%;
+    padding-top: 2%;
+}
+
+.totalSpace {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 2px solid var(--dark-blue);
+    border-radius: 10px;
+    width: 70%;
+    height: 500px;
+    margin: auto;
+}
+.content {
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: left;
+    flex-direction: row;
+    justify-content: space-between;   
+    width: 100%;
+    min-width: 200px;
+    height: 100%;
+    
+}
+
+.radio, .input {
+    margin-top: 5%;
+}
+
+form {
+    padding-top: 7%;
+    padding-left: 7%;
+    font-family: 'Bebas Neue', cursive;
+    color: var(--green-blue);
+}
+
+.image {    
+    border-radius: 0 10px 10px 0;
+    height: 100%;
+    width: 100%;
+}
+
+.title:hover {
+    text-shadow:rgb(102, 82, 1) 1px 0 15px;
+}
+
+
+@media only screen and (max-width: 1550px) {
+    .password-generator {
+        height: 40%;
+        margin-bottom: 5%;
+    }
+
+    .totalSpace {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 40%;        
+    }
+    
+    .content {
+        max-height: 80%;
+        margin: auto;
+        text-align: left;
+        justify-content: space-between;   
+        width: 100%;
+        padding-bottom: 7%;
+    }
+   
+    .image {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 0 0 10px 10px ;
+    }
+}
