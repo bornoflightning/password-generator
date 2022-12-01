@@ -11,7 +11,10 @@ const button = document.querySelector("#button");
 const addNumber = document.getElementById("numbers");
 const addSpecial = document.getElementById("specialCharacters");
 const addLetters = document.getElementById("letters");
-// const addLength = document.getElementById("input");
+
+// this variable requests the length size of list
+const addLength = parseInt(document.getElementById("input"));
+
 
 
 // this function inserts items from a new list into a desired (existingList) list and returns the new edited list
@@ -43,15 +46,29 @@ function passwordGenerator(list) {
     }
     return password; 
 }
-button.addEventListener("click",()=> {
+
+// this fucntion displays the password to the main screen
+// created a separate a fucntion to keep code clean and not run under callback for button.Eventlistener direclty
+function passwordDisplay() {
     buttonChecker(addNumber, numbers);
     buttonChecker(addSpecial, specialCharacters);
     buttonChecker(addLetters, letters);
+
+    if (isNaN(addLength)){
+        alert("please type in a number, that is not a number")
+    } else {
+        if (bigList.length < 1) {
+            alert("you need to choose an option below");
+        } else{
+            const password = passwordGenerator(bigList);
+            alert(password);
+        };
+    }
     
-    if (bigList.length < 1) {
-        alert("you need to choose an option below");
-    } else{
-        const password = passwordGenerator(bigList);
-        alert(password);
-    };    
+  
+}
+
+
+button.addEventListener("click",()=> {
+        passwordDisplay();
 })          
