@@ -17,9 +17,11 @@ const addLetters = document.getElementById("letters");
 function buttonChecker(button, list) {
     if (button.checked) {
         alert(list);
-        bigList.push.apply(list);
-        console.log(bigList);
+        for (let i; i < list.length; i++){ 
+            bigList.append(list[i]);
+        }
         alert("yay");
+        alert(bigList);
         }
             }
 button.addEventListener("click",()=> {
