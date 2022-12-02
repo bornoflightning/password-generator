@@ -3,8 +3,10 @@
 // here we create the lists holding the elements that will be chosen to create a password
 const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 const specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*"];
-const letters = ["A","a","B","b","C","c","D","d","E","e","F","f","G","g","H","h","I","i","J","j","k","L","l","M",
-                "m","N","n","O","o","P","p","Q","q","R","r","S","s","T","t","U","u","V","v","W","w","X","x","Y","y","Z","z"];
+const lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j","k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v",
+                 "w", "x", "y", "z"];
+const upperCase= ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L","M", "N", "O", "P", "Q,", "R", "S", "U", "V",
+                    "W", "X", "Y", "Z"];
 
 // master list where all characters accepted will be added to be used for password generator
 let bigList = [];
@@ -14,7 +16,8 @@ const button = document.querySelector("#button");
 // radiobutton variables 
 const addNumber = document.getElementById("numbers");
 const addSpecial = document.getElementById("specialCharacters");
-const addLetters = document.getElementById("letters");
+const addLowerCase = document.getElementById("lowerCase");
+const addUpperCase = document.getElementById("upperCase");
 
 
 // this function inserts items from a new list into a desired (existingList) list and returns the new edited list
@@ -62,7 +65,8 @@ function passwordDisplay(length) {
     // functions checking for clicked buttons along with paired lists as arguments
     buttonChecker(addNumber, numbers);
     buttonChecker(addSpecial, specialCharacters);
-    buttonChecker(addLetters, letters);
+    buttonChecker(addLowerCase, lowerCase);
+    buttonChecker(addUpperCase, upperCase);
     // we want to keep bad users from breaking the app, here we check to ensure that the input in the text box is a digit 
     // before continuing, provides an alert if input is wrong.
     if (isNaN(length)){
@@ -72,19 +76,22 @@ function passwordDisplay(length) {
         if (bigList.length < 1) {
             alert("you need to choose an option below");
         } else{
-            const password = passwordGenerator(bigList, length);
+            // use join to return password as a single string instead of list with strings separated by commas
+            const password = passwordGenerator(bigList, length).join("");
             return password;
         };
     }
 }
 
 // here we have a listener that puts it all together when our submit button is pressed 
-button.addEventListener("click",()=> {
-        // this variable requests the length size of list, which was provided as input in this text form
+button.addEventListener("click",(e)=> {
+        // this prevents page from clearing after clicking submit
+        e.preventDefault();
+        // this variable requests the length size of list, which was provided as input in this text form and assigns the provided id by value
         var addLength = parseInt(document.getElementById("input").value);
         // we store the password provided and provide the argument for the variable of length created 
         const password = passwordDisplay(addLength);        
         // we dynamically change the spot reserved for our password to display on our HTML
-        document.getElementById("finalPassword").innerHTML = password;        
+        document.getElementById("finalPassword").innerHTML = "YOUR PASSWORD IS:   " + password;        
     }
 );          
