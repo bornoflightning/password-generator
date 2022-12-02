@@ -81,6 +81,20 @@ form {
     text-shadow:rgb(102, 82, 1) 1px 0 15px;
 }
 
+#passwordBlock {
+    display: flex;
+    background-color: blue;
+    padding: 2%;
+    margin: auto;
+    margin-top: 3%;
+}
+
+#finalPassword {
+    border: px solid;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+}
+
 
 @media only screen and (max-width: 1550px) {
     .password-generator {
