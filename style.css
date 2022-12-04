@@ -8,7 +8,7 @@
     --gray-green: #808D8E;
     --dark-blue: #0B2027;
     --gold: #FFD639;
-    --green-blue: #40798C
+    --green-blue: #40798C;
 }
 
 /* body info */
@@ -57,7 +57,7 @@ body {
 
 .content {
     margin: auto;
-    margin-top: 5%;
+    margin-top: 1%;
     margin-bottom: 5%;
     text-align: left;
     flex-direction: row;
@@ -70,7 +70,7 @@ body {
 
 /* buttons and forms, and their give effects */
 .radio, .input {
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 form {
@@ -86,24 +86,76 @@ form {
     width: 100%;
 }
 
+#button {
+    background: #A3A5C3;
+    background-image: -webkit-linear-gradient(top, #A3A5C3, #0B2027);
+    background-image: -moz-linear-gradient(top, #A3A5C3, #0B2027);
+    background-image: -ms-linear-gradient(top, #A3A5C3, #0B2027);
+    background-image: -o-linear-gradient(top, #A3A5C3, #0B2027);
+    background-image: linear-gradient(to bottom, #A3A5C3, #0B2027);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 5px;
+    text-shadow: 0px 0px 0px #666666;
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    font-size: 17px;
+    padding: 5px 15px 5px 15px;
+    border: solid #2b2b24 2px;
+    text-decoration: none;
+  }
+
 /* Aread displaying the password */
 #passwordBlock {
-    border-radius: 5px;
-    width: 50%;
+    border-radius: 3px;
+    width: 90%;
     display: flex;
     text-align: center;
     justify-content: center;
     margin: auto;
-    margin-top: 3%;
+    margin-top: 5%;
+    white-space: -pre-wrap;
+    word-wrap: break-word;
+    background: linear-gradient(135deg,black, var(--dark-purple),yellow,  var(--dark-purple), black);
+    border-radius: 10px;
+    animation: animate 1.5s linear infinite;
+      
 }
 
 #finalPassword {
- color: var(--dark-blue);    
+    border: 2px solid var(--dark-blue);
+    background-color: var(--dark-blue);
+    border-radius: 5px;   
+    color: white;  
+}
+
+p {
+    margin: 2%;
+    padding: 1%;
+    max-width: 95%;
+    max-height: 95%;
 }
 
 /* effects */
 .title:hover {
     text-shadow:rgb(102, 82, 1) 1px 0 15px;
+}
+
+#button:hover {
+    background: rgb(red, green, blue);
+    background-image: -webkit-linear-gradient(top, #947EB0,#080a2b);
+    background-image: -moz-linear-gradient(top, #947EB0,#080a2b);
+    background-image: -ms-linear-gradient(top, #947EB0,#080a2b);
+    background-image: -o-linear-gradient(top, #947EB0,#080a2b);
+    background-image: linear-gradient(to bottom, #947EB0,#080a2b);
+    text-decoration: none;
+  }
+  
+
+@keyframes animate {
+    100% {
+        filter: hue-rotate(360deg);
+    }
 }
 
 
