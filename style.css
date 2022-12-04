@@ -85,7 +85,7 @@ form {
     height: 100%;
     width: 100%;
 }
-
+/* submit button */
 #button {
     background: #A3A5C3;
     background-image: -webkit-linear-gradient(top, #A3A5C3, #0B2027);
@@ -109,14 +109,14 @@ form {
 #passwordBlock {
     border-radius: 3px;
     width: 90%;
-    display: flex;
+    display: none;
     text-align: center;
     justify-content: center;
     margin: auto;
     margin-top: 5%;
     white-space: -pre-wrap;
     word-wrap: break-word;
-    background: linear-gradient(135deg,black, var(--dark-purple),yellow,  var(--dark-purple), black);
+    background: linear-gradient(135deg,rgb(19, 18, 22), var(--dark-purple),yellow,  var(--dark-purple), rgb(19, 18, 22));
     border-radius: 10px;
     animation: animate 1.5s linear infinite;
       

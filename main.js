@@ -5,7 +5,7 @@ const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 const specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*"];
 const lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j","k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v",
                  "w", "x", "y", "z"];
-const upperCase= ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L","M", "N", "O", "P", "Q,", "R", "S", "U", "V",
+const upperCase= ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L","M", "N", "O", "P", "Q", "R", "S", "U", "V",
                     "W", "X", "Y", "Z"];
 
 // variables used for test() function as RegExp
@@ -133,6 +133,7 @@ button.addEventListener("click",(e)=> {
     let lows = passwordChecker(password, addLowerCase, lowerCode);
     let upps = passwordChecker(password, addUpperCase, upperCode);
 
+    document.getElementById("passwordBlock").style.display = "flex";
     // this adds our password to HTML file and posts on front page the result
     document.getElementById("finalPassword").innerHTML = "YOUR PASSWORD IS:   " + password;  
 });
