@@ -1,3 +1,5 @@
+
+/* variables */
 :root {
     --light-puple: #A3A5C3;
     --dark-purple: #947EB0;
@@ -9,10 +11,12 @@
     --green-blue: #40798C
 }
 
+/* body info */
 body {
     background: var(--dark-blue);
 }
 
+/* white box in center of page holding info */
 .big-box {    
     border-radius: 10px;
     background: white;
@@ -22,6 +26,7 @@ body {
     margin: auto;   
 }
 
+/* smaller box inside big one */
 .password-generator {
     content: flex;
     text-align: center;
@@ -29,6 +34,7 @@ body {
     
 }
 
+/* title */
 .title {
     font-family: 'Bebas Neue', cursive;
     text-shadow:#FC0 1px 0 10px;
@@ -37,6 +43,7 @@ body {
     padding-top: 2%;
 }
 
+/* div holding forms buttons and p */
 .totalSpace {
     display: flex;
     flex-direction: row;
@@ -47,6 +54,7 @@ body {
     height: 500px;
     margin: auto;
 }
+
 .content {
     margin: auto;
     margin-top: 5%;
@@ -60,6 +68,7 @@ body {
     
 }
 
+/* buttons and forms, and their give effects */
 .radio, .input {
     margin-top: 5%;
 }
@@ -77,11 +86,28 @@ form {
     width: 100%;
 }
 
+/* Aread displaying the password */
+#passwordBlock {
+    border-radius: 5px;
+    width: 50%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 3%;
+}
+
+#finalPassword {
+ color: var(--dark-blue);    
+}
+
+/* effects */
 .title:hover {
     text-shadow:rgb(102, 82, 1) 1px 0 15px;
 }
 
 
+/* response layout properties */
 @media only screen and (max-width: 1550px) {
     .password-generator {
         height: 40%;
